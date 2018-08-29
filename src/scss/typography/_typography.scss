@@ -1,0 +1,25 @@
+body {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(0.875);
+	line-height: $font__line-height-body;
+}
+
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+.entry-meta {
+	color: $color__text-meta;
+}
+
+@import "headings";
+
+@import "copy";

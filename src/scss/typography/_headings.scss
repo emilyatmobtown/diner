@@ -1,0 +1,35 @@
+h1 {
+	@include font-size(2.25);
+	margin: 0 0 1rem;
+	clear: both;
+}
+
+h2 {
+	@include font-size(2.25);
+	margin: 0 0 0.5rem;
+	clear: both;
+}
+
+h3 {
+	@include font-size(2);
+	margin: 0 0 0.5rem;
+	clear: both;
+}
+
+h4 {
+	@include font-size(1.75);
+	margin: 0 0 0.5rem;
+	clear: both;
+}
+
+h5 {
+	@include font-size(1.5);
+	margin: 0 0 0.5rem;
+	clear: both;
+}
+
+h6 {
+	@include font-size(1.25);
+	margin: 0 0 0.5rem;
+	clear: both;
+}

@@ -1,0 +1,60 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+	border-radius: 0;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, .8);
+	@include font-size(0.875);
+	line-height: 1;
+	padding: .75em 1em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+/* Header Toggle Buttons */
+.button-toggle {
+	height: $size__header-icon;
+	width: $size__header-icon;
+	margin: ($size__header-height-sm - $size__header-icon) / 2 * -1  $grid-gutter-width / 2 * -1;
+    padding: ($size__header-height-sm - $size__header-icon) / 2 + $grid-gutter-width / 4  $grid-gutter-width / 4 + $size__header-icon;
+    background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: $size__header-icon;
+	background-position: center center;
+	border: 0;
+	border-radius: 0;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: ease background-color 0.2s;
+	
+	&:hover {
+		background-color: $color__background-header-secondary;
+	}
+	
+	&:focus {
+		outline: 1px auto -webkit-focus-ring-color;
+	}
+}
+
+.toggled .button-toggle {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="%23fff" d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>'); // x icon
+	background-color: $color__background-header-secondary;
+}
+
+@include media-breakpoint-up(lg) {
+	.button-toggle {
+	    padding-top: ($size__header-height-lg - $size__header-icon) / 2 + ($grid-gutter-width / 4);
+	    padding-bottom: ($size__header-height-lg - $size__header-icon) / 2 + ($grid-gutter-width / 4);
+   	}
+}
+

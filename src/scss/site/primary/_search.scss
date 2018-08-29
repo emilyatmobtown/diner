@@ -1,0 +1,60 @@
+.site-search {
+	text-align: right;
+}
+
+/* Header Search */
+#search .search-form {
+	width: 100vw;
+    background-color: $color__background-header-secondary;
+	position: absolute;
+    right: -150vw;
+    top: $size__header-height-sm / 2 + $size__header-icon / 2;
+    transition: ease right 0.2s;
+	padding: $grid-gutter-width / 2;
+	z-index: 10;
+
+	.search-submit {
+		height: $size__input-height;
+		width: $size__input-height + 5;
+		position: absolute;
+	    right: $grid-gutter-width / 2;
+	    bottom: $grid-gutter-width / 2;
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="%23333333" d="M12.9 14.32a7.947 7.947 0 0 1-4.908 1.682 8 8 0 1 1 6.305-3.075l.013-.018 5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 1 0 0 12z"/></svg>'); /* search icon */
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-size: $size__header-icon;
+		background-position: center center;
+		border: 0;
+		border-radius: 0;
+		display: inline-block;
+		vertical-align: middle;
+		color: transparent;
+		cursor: pointer;
+	}
+
+	label {
+		margin: 0;
+		width: 100%;
+	}
+	
+	input[type="search"] {
+		width: 100%;
+		border: 0;
+		padding-right: $size__header-icon + $grid-gutter-width + 10;
+	}
+}
+
+#search.toggled .search-form {
+	right: 0;
+}
+
+.search-toggle {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="%23fff" d="M12.9 14.32a7.947 7.947 0 0 1-4.908 1.682 8 8 0 1 1 6.305-3.075l.013-.018 5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 1 0 0 12z"/></svg>'); /* search icon */
+}
+
+@include media-breakpoint-up(lg) {
+	#search .search-form {
+		width: $size__input-width-lg;
+		top: $size__header-height-lg - $grid-gutter-width / 2;
+	}
+}

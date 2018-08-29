@@ -1,0 +1,41 @@
+.site-header {
+	background-color: $color__background-header;
+}
+
+.site-header > .container > .row {
+	height: $size__header-height-sm;
+}
+
+.site-branding {
+	text-align: center;
+}
+
+.site-search {
+	text-align: right;
+}
+
+.site-logo {
+	width: $images__header-logo-width-sm;
+	height: auto;
+}
+
+@include media-breakpoint-up(lg) {
+	.site-header {
+		padding-left: $grid-gutter-width;
+		padding-right: $grid-gutter-width;
+	}
+	
+	.site-header > .container > .row {
+		height: $size__header-height-lg;
+	}
+
+	.site-branding {
+		text-align: left;
+	}
+	
+	.site-logo {
+		width: $images__header-logo-width-lg;
+	}
+}
+
+

@@ -1,0 +1,35 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin-bottom: 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.page-header,
+.entry-content,
+.entry-summary,
+.entry-header {
+	margin: 1.25em 0 0;
+}
+
+.entry-meta {
+	margin: 0 0 0.25em;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.page-header,
+.page-content {
+	margin-left: 0;
+	margin-right: 0;
+}
+

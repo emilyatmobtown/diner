@@ -1,0 +1,153 @@
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		width: 100vw;
+	    background-color: $color__background-header-secondary;
+		position: absolute;
+	    left: -150vw;
+	    top: 38px;
+	    transition: ease left 0.2s;
+	    z-index: 10;
+
+		ul {
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+
+		&:hover > a,
+		&.focus > a {
+			color: $color__nav-hover;
+			background-color: $color__background-header-hover;
+		}
+		
+		&:not(:last-child) a {
+			border-bottom: 1px solid $color__background-header;
+		}
+	}
+
+	a {
+		font-size: 18px;
+		font-weight: 400;
+		color: $color__nav-links;
+		text-decoration: underline;
+		padding: 20px;
+		display: block;
+		transition: ease color 0.2s, ease background-color 0.2s;
+	}
+	
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__nav-hover;
+		background-color: $color__background-header-hover;
+	}
+}
+
+.main-navigation.toggled  {
+	ul {
+		left: 0;
+ 	}
+}
+ 
+/* Small menu. */
+.menu-toggle {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="%23fff" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>'); /* hamburger icon */
+}
+
+@include media-breakpoint-up(lg) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation {
+		
+		ul {
+			display: block;
+			width: auto;
+			background-color: transparent;
+			position: static;
+			left: auto;
+			top: auto;
+			text-align: right;
+		}
+		
+		li {
+			width: auto;
+			
+			&:not(:last-child) a {
+				border: 0;
+			}
+		}
+		
+		a {
+			margin-top: -20px;
+			margin-bottom: -20px;
+			padding-top: 39px;
+			padding-bottom: 38px;
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
