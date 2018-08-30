@@ -10,7 +10,7 @@
  *      3. JS: Reorders, concatenates & uglifies Vendor and Custom JS files.
  *      4. Images: Minifies PNG, JPEG, GIF and SVG images.
  *      5. Watches files for changes in CSS or JS.
- *      6. Watches files for changes in PHP.
+ *      6. Collects theme files and builds installable zip.
  *
  * @author Emily Leffler Schulman
  * @version 1.0.3
@@ -40,7 +40,7 @@ const
   concat        = require( 'gulp-concat' ),			// Concatenate files
   stripdebug    = require( 'gulp-strip-debug' ),	// Strip debugging
   uglify        = require( 'gulp-uglify' ),			// Minify JS
-  rename		= require( 'gulp-rename' ), 		// Renames files
+  rename	= require( 'gulp-rename' ), 		// Renames files
   zip           = require( 'gulp-zip' ),			// Zips files
   runSequence   = require( 'gulp-run-sequence' ),	// Sequences task order
   lineec       	= require( 'gulp-line-ending-corrector' ); // Consistent Line Endings
